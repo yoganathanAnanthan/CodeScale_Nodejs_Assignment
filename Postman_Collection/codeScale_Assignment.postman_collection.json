@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "632ed6aa-fa53-4501-89fb-e53c9be2268d",
+		"name": "codeScale_Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:5000/users/registeruser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYwZDFjMTFjYjU3Mzg2MDZjOGE0ZjkiLCJpYXQiOjE2ODQwNjk5MzcsImV4cCI6MTY4NDA3MDgzN30.HYbNPbbLffTWdqRKtR17IVSPbRydyAzDb2kedTryThU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"vimal\",\r\n    \"email\": \"a@gmail.com\",\r\n    \"password\": \"Ananthan123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/users/registeruser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"registeruser"
+					]
+				},
+				"description": "##register a new user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Ananthan\",\r\n    \"password\":\"Ananthan123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"auth",
+						"login"
+					]
+				},
+				"description": "##user login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5000/users/userprofile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDYwZDFjMTFjYjU3Mzg2MDZjOGE0ZjkiLCJpYXQiOjE2ODQwNzM4NjgsImV4cCI6MTY4NDA3MzkyOH0.2WW3KQiHXc5A92l-aMS63w0KKn2EG3mh_QF7bpwvosg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/users/userprofile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"users",
+						"userprofile"
+					]
+				},
+				"description": "##user profile \r\nhave to give the valid access token"
+			},
+			"response": []
+		}
+	]
+}
